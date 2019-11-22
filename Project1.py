@@ -45,7 +45,7 @@ def getMinMax(file):
     #minmax is a list containing a list of the min (index 0) and max (index 1) for each of the 6 columns we need to consider in order     
     minmax = [[float('nan'),float('nan')],[float('nan'),float('nan')],[float('nan'),float('nan')],[float('nan'),float('nan')],
               [float('nan'),float('nan')],[float('nan'),float('nan')]]
-    for line in file.readlines()[1:]:
+    for line in file.readlines()[1:]:#change this
         linelist = line.rstrip().split(",")
         lprocessed = [linelist[0]] + [float(linelist[1])]
         for value in linelist[2:]:
